@@ -1,15 +1,15 @@
 const initialState={
-    todos:['job','helping','savings','bike']
+    alltodos:['job','helping','savings','bike']
 }
 
 function todoReducer(state=initialState,action){
     if(action.type==='ADDTASK'){
-        return{...state,todos:[...state.todos,action.payload]}
+        return{...state,alltodos:[...state.alltodos,action.payload]}
     }
     if(action.type==='DELETETASK'){
-        var temp = [...state.todos];
+        var temp = [...state.alltodos];
         temp.splice(action.payload,1);
-        return {...state,todos:[...temp]}
+        return {...state,alltodos:[...temp]}
     }
     return state;
  }
