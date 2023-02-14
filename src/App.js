@@ -6,6 +6,7 @@ import store from './store/store';
 import Counter from './components/Counter';
 import Todolist from './components/Todolist';
 import Countries from './components/Countries';
+import Likedislike from './components/likedislike';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <div className="betterview">
       <h1>This is Redux</h1>
       <Counter/>
+      <Likedislike/>
       <Todolist/>
       <Countries/>
     </div>

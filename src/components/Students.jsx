@@ -1,7 +1,13 @@
 import React from "react";
 function Students(){
     return (
-        <div>Students</div>
+        <div>Students
+        <ul>
+     {
+       
+     }
+        </ul>
+      </div>
     )
 }
-export default Students;
+export default connect(store=>store)(Students);

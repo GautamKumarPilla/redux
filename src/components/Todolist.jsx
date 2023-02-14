@@ -15,7 +15,7 @@ function Todolist(props){
             <input type="text" onChange={(e)=>{setNewtask(e.target.value)}}/>
             <button onClick={addTask}>Add Task</button>
             {
-             props.todos.todos.map((t,i) =>{
+             props.todos.todos.map((t,i) =>{ 
                 return(<li>                            
                   {t}
                   <button onClick={()=>{deleteTask(i)}}>Delete</button>

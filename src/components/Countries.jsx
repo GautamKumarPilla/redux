@@ -13,7 +13,7 @@ function Countries(props){
             <ul>
                 {
                     props.countries.countries.map((country) =>{
-                            return (<table border={'2px'} cellPadding={'15px'} cellSpacing={'10px'} align={'center'} Valign={'middle'}>
+                                return (<table border={'2px'} cellPadding={'15px'} cellSpacing={'10px'} align={'center'} Valign={'middle'}>
                                 <tr><td rowSpan={6}>{country.name}</td></tr>
                                 <tr><td rowSpan={6}>{country.capital}</td></tr>
                                 <tr><td rowSpan={6}>{country.population}</td></tr>

@@ -10,7 +10,7 @@ function counterReducer(state=initialState,action){
         return {...state,count:state.count-1}
     }
     if(action.type==='RESET'){
-        return {...state,count:state.count*0}
+        return {...state,count:initialState.count}
     }
     return state
 }
