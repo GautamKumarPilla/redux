@@ -6,7 +6,7 @@ function counterReducer(state=initialState,action){
     if(action.type==='INC'){
         return {...state,count:state.count+1}
     }
-    if(action.type==='DEC'){
+    if(action.type==='DEC' && state.count>=0 && !state.count <= 0){
         return {...state,count:state.count-1}
     }
     if(action.type==='RESET'){

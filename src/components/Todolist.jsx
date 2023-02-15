@@ -14,12 +14,12 @@ function Todolist(props){
         <div>
             <h1>Todolist</h1>
             <input type="text" onChange={(e)=>{setNewtask(e.target.value)}}/>
-            <button onClick={() =>{props.handlenewtask(newtask)}}>Add Task</button>
+            <button onClick={() =>{props.handlenewtask(newtask)}} className="btn btn-outline-info">Add Task</button>
             {
              props.alltodos.map((t,i) =>{ 
                 return(<li>                            
                   {t}
-                  <button onClick={()=>{props.deleteTask(i)}}>Delete</button>
+                  <button onClick={()=>{props.deletenewtask(i)}} className="btn btn-outline-danger mx-3 p-1">Delete</button>
                 </li>)
              })
             }
@@ -29,6 +29,6 @@ function Todolist(props){
 export default connect(function(state){return state.todos},
 function(dispatch) {
    return {
-     handlenewtask:(nt)=>{dispatch({type:'ADDTASK',payload:nt})},
-     deletetask:(n)=>{dispatch({type:'DELETETASK',payload:n})}
+     handlenewtask:(nt)=>{dispatch(addTodo(nt))},
+     deletenewtask:(n)=>{dispatch(deleteTodo(n))}
 }}) (Todolist);

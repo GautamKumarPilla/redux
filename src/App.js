@@ -11,7 +11,7 @@ import Likedislike from './components/likedislike';
 function App() {
   return (
      <Provider store={store}>
-    <div className="betterview">
+    <div className="border border-3 border-success bg-secondary">
       <h1>This is Redux</h1>
       <Counter/>
       <Likedislike/>

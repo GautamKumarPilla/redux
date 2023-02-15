@@ -2,8 +2,8 @@ const initialState={
     countries:[]
 }
 function countriesReducer(state=initialState,action){
-    if(action.type==='UPDATECOUNTRIES'){
-        return {...state,countries:[...action.payload]}
+    if(action.type==='GETCOUNTRIES'){
+        return {...state,countries:action.payload}
     }
     return state
 }
